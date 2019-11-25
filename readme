@@ -1,16 +1,35 @@
-for external data mLibExternal folder, you can download it from bundlefusion github! in external, there is a mLib library, some of files in it, I have changed!
+This is the bundlefusion of linux version, exactly the ubuntu version. I have test in Ubuntu16.04 + CUDA9.0 and Ubuntu 18.04 + CUDA10. I think other version is OK, may be you should change some compile configuration!
+The project archeticture:
 
-This version is made by Shiyuan Guan. if you have problem, you can send me a mail:deansaint@126.com
-or you can add my wechat or qq:31781410
-Compile and run:
-
+BundleFusion_Ubuntu_V0 has the following folders and a CMakeLists.txt and two parameter configuration files:
+cmake_modules
+data
+external
+FriedLiver
+lib
+mLibExternal
+modules
+scans
+build
+CMakeLists.txt
+zParametersBundlingDefault.txt
+zParametersDefault.txt
+The data,lib,mLibExternal,scans you must make them yourself!
+"data" folder, you put the dataset for example:sequence.sens, you can download it from the https://github.com/niessner/BundleFusion.
+"lib" is empty folder just used in compilation.
+ "mLibExternal" folder you must add the files from the bundlefusion in https://github.com/niessner/BundleFusion.
+"scans" folder is the mesh output! the results you are looking forward to!
+make and compile:
 cd build
 cmake ..
 make -j8
-then
-put the zParametersBundlingDefault.txt and zParametersDefault.txt to build foler, put sequence.sens or any dateset, which you can download from the bundlefusion github to data folders  and then
+now you just put the "zParametersBundlingDefault.txt" and "zParametersDefault.txt"  into build folder and just 
 ./FriedLiver
-
-you can see the bundlefusion running and you can push "9" key to save mesh
-
-so far no display, I will add display to it with imGUI, I like imgui.
+the Bundlefuson_Ubuntu is running and press "9" key you can save the mesh!
+For now, no display, when I have time, I will add display, I will use imGUI and OpenGL to display and render!
+If anyone have any problem you can send me a email:deansaint@126.com or qq:3171410 or join my wechat for VIO
+I am also R&D VIO slam!
+I hope all of you have benefit from my porting project--BundleFusion_Ubuntu!
+Guan Shi yuan
+关士远
+2019.11.26
