@@ -1,0 +1,16 @@
+for external data mLibExternal folder, you can download it from bundlefusion github! in external, there is a mLib library, some of files in it, I have changed!
+
+This version is made by Shiyuan Guan. if you have problem, you can send me a mail:deansaint@126.com
+or you can add my wechat or qq:31781410
+Compile and run:
+
+cd build
+cmake ..
+make -j8
+then
+put the zParametersBundlingDefault.txt and zParametersDefault.txt to build foler, put sequence.sens or any dateset, which you can download from the bundlefusion github to data folders  and then
+./FriedLiver
+
+you can see the bundlefusion running and you can push "9" key to save mesh
+
+so far no display, I will add display to it with imGUI, I like imgui.
