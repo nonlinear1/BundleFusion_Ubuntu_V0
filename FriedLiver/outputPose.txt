@@ -1,0 +1,49 @@
+		case 'Z': //save out correspondences and trajectory
+		{
+		/*	g_depthSensingBundler->saveGlobalSparseCorrsToFile(util::removeExtensions(GlobalAppState::get().s_binaryDumpSensorFile) + ".corrs");
+			std::vector<mat4f> trajectory; g_depthSensingBundler->getTrajectoryManager()->getOptimizedTransforms(trajectory);
+			BinaryDataStreamFile s(util::removeExtensions(GlobalAppState::get().s_binaryDumpSensorFile) + ".traj", true);
+			s << trajectory; s.close();
+			std::cout << "saved trajectory and sparse global corrs" << std::endl;*/
+			
+			//std::vector<mat4f> trajectory; g_depthSensingBundler->getTrajectoryManager()->getOptimizedTransforms(trajectory);
+			//std::ifstream trajectoryFile("E:/Code/BundleFusion/dataset/TUM/associate_with_groundtruth.txt");
+			//if (!trajectoryFile) {
+			//	std::cout << "Fail to open input associate_with_groundtruth.txt!!" << std::endl;
+			//	exit(0);
+			//}
+
+			////creat	
+			//std::ofstream trajectoryFileOut;
+			//trajectoryFileOut.open("E:/Code/BundleFusion/dataset/TUM/associate_myresult.txt");
+			//if (!trajectoryFileOut) {
+			//	std::cout << "Fail to creat associate_myresult.txt!!"<< std::endl;
+			//	exit(0);
+			//}
+	
+			//Eigen::Matrix3f R_mat = Eigen::Matrix3f::Identity();
+			//Eigen::Vector3f t_vec;
+			//for (unsigned int i = 0; i < trajectory.size(); i++)
+			//{
+			//	Matrix3x3<float> Rot = trajectory[i].getRotation();
+			//	R_mat(0, 0) = Rot.at(0, 0);		R_mat(0, 1) = Rot.at(0, 1);		R_mat(0, 2) = Rot.at(0, 2);
+			//	R_mat(1, 0) = Rot.at(1, 0);		R_mat(1, 1) = Rot.at(1, 1);		R_mat(1, 2) = Rot.at(1, 2);
+			//	R_mat(2, 0) = Rot.at(2, 0);		R_mat(2, 1) = Rot.at(2, 1);		R_mat(2, 2) = Rot.at(2, 2);
+
+			//	vec3<float> translation = trajectory[i].getTranslation();
+			//	t_vec[0] = translation[0];		t_vec[1] = translation[1];		t_vec[2] = translation[2];
+			//	Eigen::Quaternionf R_quat = Eigen::Quaternionf(R_mat);
+
+			//	std::string org_str, add_str;
+
+			//	if (std::getline(trajectoryFile, org_str) && (!org_str.empty())){
+			//		std::stringstream ss;
+			//		ss << " " <<t_vec[0] << " " << t_vec[1] << " " << t_vec[2] << " " << R_quat.coeffs().x() << " " << R_quat.coeffs().y() << " " << R_quat.coeffs().z() << " " << R_quat.coeffs().w();
+			//		add_str = ss.str();
+			//		trajectoryFileOut << org_str << add_str << "\n";
+			//	}
+			//}
+			//trajectoryFile.close();
+			//trajectoryFileOut.close();
+			//std::cout << "saved trajectory!" << std::endl;
+	
