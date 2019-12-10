@@ -15,9 +15,7 @@ CMakeLists.txt
 zParametersBundlingDefault.txt
 zParametersDefault.txt
 The data,lib,mLibExternal,scans you must make them yourself!
-"external" this folder has a mLib, which is changed by me! I will upload it to github, I have tryed to upload it to 
-github for several times, But I failed.
-If you need it, you can send me a email, I will send mLib whcih changed by me to you!!! my email:deansaint@126.com
+"external" this folder has a mLib, which is changed by me!
 "data" folder, you put the dataset for example:sequence.sens, you can download it from the https://github.com/niessner/BundleFusion.
 "lib" is empty folder just used in compilation.
  "mLibExternal" folder you must add the files from the bundlefusion in https://github.com/niessner/BundleFusion.
