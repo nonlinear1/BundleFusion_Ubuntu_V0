@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{28114563-F715-4042-A798-B2A73D9C8AC4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>testD3D11</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../../include/;../../../mLibExternal/include/;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;../../../mLibExternal/libsWindows/lib64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../../include/;../../../mLibExternal/include/;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;../../../mLibExternal/libsWindows/lib64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <AdditionalOptions>/Zm135 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>FW1FontWrapper.lib;d3d11.lib;d3dx11.lib;D3DCompiler.lib;kernel32.lib;user32.lib;gdi32.lib;zlib64.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;FreeImage.lib;OpenMeshCored.lib;OpenMeshToolsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OpenMPSupport>true</OpenMPSupport>
+      <AdditionalOptions>/Zm135 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>FW1FontWrapper.lib;d3d11.lib;d3dx11.lib;D3DCompiler.lib;kernel32.lib;user32.lib;gdi32.lib;zlib64.lib;FreeImage.lib;OpenMeshCore.lib;OpenMeshTools.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\application-base\applicationWin32.h" />
+    <ClInclude Include="..\..\include\application-base\graphicsAsset.h" />
+    <ClInclude Include="..\..\include\application-base\graphicsDevice.h" />
+    <ClInclude Include="..\..\include\application-base\windowWin32.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11AssetRenderer.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Buffer.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Canvas2D.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11ConstantBuffer.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11GeometryShader.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11GraphicsDevice.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11PixelShader.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11PointCloud.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11RenderTarget.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11ShaderManager.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Texture2D.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Texture3D.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11TriMesh.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Utility.h" />
+    <ClInclude Include="..\..\include\application-d3d11\D3D11VertexShader.h" />
+    <ClInclude Include="..\..\include\core-base\baseImage.h" />
+    <ClInclude Include="..\..\include\core-base\baseImageHelper.h" />
+    <ClInclude Include="..\..\include\core-base\binaryGrid3.h" />
+    <ClInclude Include="..\..\include\core-base\common.h" />
+    <ClInclude Include="..\..\include\core-base\distanceField3.h" />
+    <ClInclude Include="..\..\include\core-base\grid2.h" />
+    <ClInclude Include="..\..\include\core-base\grid3.h" />
+    <ClInclude Include="..\..\include\core-base\multiStream.h" />
+    <ClInclude Include="..\..\include\core-graphics\boundingBox2.h" />
+    <ClInclude Include="..\..\include\core-graphics\boundingBox3.h" />
+    <ClInclude Include="..\..\include\core-graphics\camera.h" />
+    <ClInclude Include="..\..\include\core-graphics\cameraTrackball.h" />
+    <ClInclude Include="..\..\include\core-graphics\colorUtils.h" />
+    <ClInclude Include="..\..\include\core-graphics\cone.h" />
+    <ClInclude Include="..\..\include\core-graphics\cylinder.h" />
+    <ClInclude Include="..\..\include\core-graphics\dist.h" />
+    <ClInclude Include="..\..\include\core-graphics\intersection.h" />
+    <ClInclude Include="..\..\include\core-graphics\line2.h" />
+    <ClInclude Include="..\..\include\core-graphics\lineSegment2.h" />
+    <ClInclude Include="..\..\include\core-graphics\lineSegment3.h" />
+    <ClInclude Include="..\..\include\core-graphics\orientedBoundingBox2.h" />
+    <ClInclude Include="..\..\include\core-graphics\orientedBoundingBox3.h" />
+    <ClInclude Include="..\..\include\core-graphics\plane.h" />
+    <ClInclude Include="..\..\include\core-graphics\polygon.h" />
+    <ClInclude Include="..\..\include\core-graphics\ray.h" />
+    <ClInclude Include="..\..\include\core-graphics\RGBColor.h" />
+    <ClInclude Include="..\..\include\core-graphics\sphere.h" />
+    <ClInclude Include="..\..\include\core-graphics\triangle.h" />
+    <ClInclude Include="..\..\include\core-math\blockedPCA.h" />
+    <ClInclude Include="..\..\include\core-math\denseMatrix.h" />
+    <ClInclude Include="..\..\include\core-math\eigenSolver.h" />
+    <ClInclude Include="..\..\include\core-math\kMeansClustering.h" />
+    <ClInclude Include="..\..\include\core-math\linearSolver.h" />
+    <ClInclude Include="..\..\include\core-math\mathUtil.h" />
+    <ClInclude Include="..\..\include\core-math\mathVector.h" />
+    <ClInclude Include="..\..\include\core-math\matrix2x2.h" />
+    <ClInclude Include="..\..\include\core-math\matrix3x3.h" />
+    <ClInclude Include="..\..\include\core-math\matrix4x4.h" />
+    <ClInclude Include="..\..\include\core-math\numericalRecipesTemplates.h" />
+    <ClInclude Include="..\..\include\core-math\PCA.h" />
+    <ClInclude Include="..\..\include\core-math\quaternion.h" />
+    <ClInclude Include="..\..\include\core-math\rng.h" />
+    <ClInclude Include="..\..\include\core-math\sampling.h" />
+    <ClInclude Include="..\..\include\core-math\sparseMatrix.h" />
+    <ClInclude Include="..\..\include\core-math\vec1.h" />
+    <ClInclude Include="..\..\include\core-math\vec2.h" />
+    <ClInclude Include="..\..\include\core-math\vec3.h" />
+    <ClInclude Include="..\..\include\core-math\vec4.h" />
+    <ClInclude Include="..\..\include\core-math\vec6.h" />
+    <ClInclude Include="..\..\include\core-mesh\material.h" />
+    <ClInclude Include="..\..\include\core-mesh\meshData.h" />
+    <ClInclude Include="..\..\include\core-mesh\meshIO.h" />
+    <ClInclude Include="..\..\include\core-mesh\meshShapes.h" />
+    <ClInclude Include="..\..\include\core-mesh\meshUtil.h" />
+    <ClInclude Include="..\..\include\core-mesh\plyHeader.h" />
+    <ClInclude Include="..\..\include\core-mesh\pointCloud.h" />
+    <ClInclude Include="..\..\include\core-mesh\pointCloudIO.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMesh.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshAccelerator.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshAcceleratorBruteForce.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshAcceleratorBVH.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshAcceleratorBVHMatt.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshCollisionAccelerator.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshRayAccelerator.h" />
+    <ClInclude Include="..\..\include\core-mesh\triMeshSampler.h" />
+    <ClInclude Include="..\..\include\core-network\networkClient.h" />
+    <ClInclude Include="..\..\include\core-network\networkServer.h" />
+    <ClInclude Include="..\..\include\core-util\binaryDataBuffer.h" />
+    <ClInclude Include="..\..\include\core-util\binaryDataCompressor.h" />
+    <ClInclude Include="..\..\include\core-util\binaryDataSerialize.h" />
+    <ClInclude Include="..\..\include\core-util\binaryDataStream.h" />
+    <ClInclude Include="..\..\include\core-util\colorGradient.h" />
+    <ClInclude Include="..\..\include\core-util\commandLineReader.h" />
+    <ClInclude Include="..\..\include\core-util\directory.h" />
+    <ClInclude Include="..\..\include\core-util\eventMap.h" />
+    <ClInclude Include="..\..\include\core-util\flagSet.h" />
+    <ClInclude Include="..\..\include\core-util\keycodes.h" />
+    <ClInclude Include="..\..\include\core-util\nearestNeighborSearch.h" />
+    <ClInclude Include="..\..\include\core-util\parameterFile.h" />
+    <ClInclude Include="..\..\include\core-util\pipe.h" />
+    <ClInclude Include="..\..\include\core-util\sparseGrid3.h" />
+    <ClInclude Include="..\..\include\core-util\stringUtil.h" />
+    <ClInclude Include="..\..\include\core-util\stringUtilConvert.h" />
+    <ClInclude Include="..\..\include\core-util\textWriter.h" />
+    <ClInclude Include="..\..\include\core-util\timer.h" />
+    <ClInclude Include="..\..\include\core-util\UIConnection.h" />
+    <ClInclude Include="..\..\include\core-util\uniformAccelerator.h" />
+    <ClInclude Include="..\..\include\core-util\utility.h" />
+    <ClInclude Include="..\..\include\core-util\windowsUtil.h" />
+    <ClInclude Include="..\include\ext-d3d11font\D3D11Font.h" />
+    <ClInclude Include="..\include\ext-openmesh\loader.h" />
+    <ClInclude Include="..\include\mLibCore.h" />
+    <ClInclude Include="..\include\mLibD3D11.h" />
+    <ClInclude Include="src\appTest.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\mLibInclude.h" />
+    <ClInclude Include="src\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\include\application-d3d11\D3D11Buffer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\application-d3d11\D3D11Texture2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\application-d3d11\D3D11Texture3D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-base\grid2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-base\grid3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-graphics\polygon.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\blockedPCA.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\denseMatrix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\eigenSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\PCA.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\sparseMatrix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\meshData.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\meshIO.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\meshShapes.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\pointCloud.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\pointCloudIO.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\triMesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11AssetRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11Canvas2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11GeometryShader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11GraphicsDevice.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11PixelShader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11PointCloud.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11RenderTarget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11ShaderManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11TriMesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11Utility.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11VertexShader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\appTest.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mLibSource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\pointCloud.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="shaders\test.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\core-graphics\camera.inl" />
+    <None Include="..\..\include\core-mesh\triMeshCollisionAccelerator.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="..\..\include\core-mesh\triMeshRayAccelerator.inl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

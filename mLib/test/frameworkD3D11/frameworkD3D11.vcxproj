@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{28114563-F715-4042-A798-B2A73D9C8AC4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>testD3D11</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\msvc\OpenMesh_Debug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\msvc\OpenMesh_Release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../include/;../../mLibExternal/include/;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;../../mLibExternal/libsWindows/lib64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../include/;../../mLibExternal/include/;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;../../mLibExternal/libsWindows/lib64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>D3DCompiler.lib;FW1FontWrapper.lib;d3d11.lib;d3dx11.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>D3DCompiler.lib;FW1FontWrapper.lib;d3d11.lib;d3dx11.lib;kernel32.lib;user32.lib;gdi32.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\application-base\applicationWin32.h" />
+    <ClInclude Include="..\include\application-base\graphicsAsset.h" />
+    <ClInclude Include="..\include\application-base\graphicsDevice.h" />
+    <ClInclude Include="..\include\application-base\windowWin32.h" />
+    <ClInclude Include="..\include\application-d3d11\D3D11ConstantBuffer.h" />
+    <ClInclude Include="..\include\application-d3d11\D3D11GraphicsDevice.h" />
+    <ClInclude Include="..\include\application-d3d11\D3D11PixelShader.h" />
+    <ClInclude Include="..\include\application-d3d11\D3D11TriMesh.h" />
+    <ClInclude Include="..\include\application-d3d11\D3D11Utility.h" />
+    <ClInclude Include="..\include\application-d3d11\D3D11VertexShader.h" />
+    <ClInclude Include="..\include\core-base\classList.h" />
+    <ClInclude Include="..\include\core-base\common.h" />
+    <ClInclude Include="..\include\core-base\console.h" />
+    <ClInclude Include="..\include\core-base\grid.h" />
+    <ClInclude Include="..\include\core-graphics\boundingBox3d.h" />
+    <ClInclude Include="..\include\core-graphics\camera.h" />
+    <ClInclude Include="..\include\core-graphics\orientedBoundingBox3d.h" />
+    <ClInclude Include="..\include\core-graphics\plane.h" />
+    <ClInclude Include="..\include\core-graphics\ray.h" />
+    <ClInclude Include="..\include\core-graphics\RGBColor.h" />
+    <ClInclude Include="..\include\core-math\denseMatrix.h" />
+    <ClInclude Include="..\include\core-math\kMeansClustering.h" />
+    <ClInclude Include="..\include\core-math\linearSolver.h" />
+    <ClInclude Include="..\include\core-math\mathVector.h" />
+    <ClInclude Include="..\include\core-math\matrix2x2.h" />
+    <ClInclude Include="..\include\core-math\matrix3x3.h" />
+    <ClInclude Include="..\include\core-math\matrix4x4.h" />
+    <ClInclude Include="..\include\core-math\nr_templates.h" />
+    <ClInclude Include="..\include\core-math\point1d.h" />
+    <ClInclude Include="..\include\core-math\point2d.h" />
+    <ClInclude Include="..\include\core-math\point3d.h" />
+    <ClInclude Include="..\include\core-math\point4d.h" />
+    <ClInclude Include="..\include\core-math\point6d.h" />
+    <ClInclude Include="..\include\core-math\quaternion.h" />
+    <ClInclude Include="..\include\core-math\sparseMatrix.h" />
+    <ClInclude Include="..\include\core-mesh\material.h" />
+    <ClInclude Include="..\include\core-mesh\meshData.h" />
+    <ClInclude Include="..\include\core-mesh\meshIO.h" />
+    <ClInclude Include="..\include\core-mesh\meshShapes.h" />
+    <ClInclude Include="..\include\core-mesh\meshUtil.h" />
+    <ClInclude Include="..\include\core-mesh\plyHeader.h" />
+    <ClInclude Include="..\include\core-mesh\pointCloud.h" />
+    <ClInclude Include="..\include\core-mesh\pointCloudIO.h" />
+    <ClInclude Include="..\include\core-mesh\triangleBVHAccelerator.h" />
+    <ClInclude Include="..\include\core-mesh\triMesh.h" />
+    <ClInclude Include="..\include\core-util\binaryDataBuffer.h" />
+    <ClInclude Include="..\include\core-util\binaryDataSerialize.h" />
+    <ClInclude Include="..\include\core-util\binaryDataStream.h" />
+    <ClInclude Include="..\include\core-util\clock.h" />
+    <ClInclude Include="..\include\core-util\commandLineReader.h" />
+    <ClInclude Include="..\include\core-util\directory.h" />
+    <ClInclude Include="..\include\core-util\keycodes.h" />
+    <ClInclude Include="..\include\core-util\nearestNeighborSearch.h" />
+    <ClInclude Include="..\include\core-util\parameterFile.h" />
+    <ClInclude Include="..\include\core-util\sparseGrid3d.h" />
+    <ClInclude Include="..\include\core-util\stringUtil.h" />
+    <ClInclude Include="..\include\core-util\stringUtilConvert.h" />
+    <ClInclude Include="..\include\core-util\utility.h" />
+    <ClInclude Include="..\include\ext-openmesh\loader.h" />
+    <ClInclude Include="..\include\mLibCore.h" />
+    <ClInclude Include="..\include\mLibD3D11.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="mLibInclude.h" />
+    <ClInclude Include="vizzer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mLibSource.cpp" />
+    <ClCompile Include="vizzer.cpp" />
+    <ClCompile Include="winMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="console.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\pointCloud.shader" />
+    <None Include="shaders\test.shader" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

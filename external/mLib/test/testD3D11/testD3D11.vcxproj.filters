@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="mLibHeader">
+      <UniqueIdentifier>{4c5526ff-9213-4f4f-80e1-fe88278c8b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\core-base">
+      <UniqueIdentifier>{7f2ee88f-7ae9-4603-a195-060206b4fca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\application-D3D11">
+      <UniqueIdentifier>{51fd6b4c-eb65-4ca3-9e07-0354d892179d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\core-math">
+      <UniqueIdentifier>{a8945759-7745-448f-8299-e8590104a310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\core-graphics">
+      <UniqueIdentifier>{a5f2d67d-6ed2-49f9-b6e9-76c5ec370d31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\core-util">
+      <UniqueIdentifier>{7c48a95c-3305-4d98-8712-c184c644a4a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\core-mesh">
+      <UniqueIdentifier>{bbc9449b-610f-4c73-be00-b2765a505770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\ext-openmesh">
+      <UniqueIdentifier>{128df902-dd3b-472d-90b7-9ed764e1cf76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\ext-d3d11font">
+      <UniqueIdentifier>{786f6f75-9fa3-4cee-bd72-04eead94dc73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{f1788b5b-0906-442e-b1f7-3760d1698a11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\core-network">
+      <UniqueIdentifier>{157a594e-67b8-44ce-9cd4-49561d99381c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mLibHeader\application-base">
+      <UniqueIdentifier>{788999c5-3f16-4b1b-a30f-7cd3f171d545}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\mLibCore.h">
+      <Filter>mLibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mLibD3D11.h">
+      <Filter>mLibHeader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ext-openmesh\loader.h">
+      <Filter>mLibHeader\ext-openmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ext-d3d11font\D3D11Font.h">
+      <Filter>mLibHeader\ext-d3d11font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-network\networkClient.h">
+      <Filter>mLibHeader\core-network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-network\networkServer.h">
+      <Filter>mLibHeader\core-network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-base\graphicsAsset.h">
+      <Filter>mLibHeader\application-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-base\graphicsDevice.h">
+      <Filter>mLibHeader\application-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-base\windowWin32.h">
+      <Filter>mLibHeader\application-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-base\applicationWin32.h">
+      <Filter>mLibHeader\application-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11RenderTarget.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11ShaderManager.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Texture2D.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Texture3D.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11TriMesh.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Utility.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11VertexShader.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11AssetRenderer.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Buffer.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11Canvas2D.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11ConstantBuffer.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11GeometryShader.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11GraphicsDevice.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11PixelShader.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\application-d3d11\D3D11PointCloud.h">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\binaryGrid3.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\common.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\distanceField3.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\grid2.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\grid3.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\multiStream.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\baseImage.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-base\baseImageHelper.h">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\camera.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\cameraTrackball.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\colorUtils.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\cone.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\cylinder.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\dist.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\intersection.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\line2.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\lineSegment2.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\lineSegment3.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\orientedBoundingBox2.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\orientedBoundingBox3.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\plane.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\polygon.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\ray.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\RGBColor.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\sphere.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\triangle.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\boundingBox2.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-graphics\boundingBox3.h">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\linearSolver.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\mathUtil.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\mathVector.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\matrix2x2.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\matrix3x3.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\matrix4x4.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\numericalRecipesTemplates.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\PCA.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\quaternion.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\rng.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\sampling.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\sparseMatrix.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\vec1.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\vec2.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\vec3.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\vec4.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\vec6.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\blockedPCA.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\denseMatrix.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\eigenSolver.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-math\kMeansClustering.h">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\pointCloudIO.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMesh.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshAccelerator.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshAcceleratorBruteForce.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshAcceleratorBVH.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshAcceleratorBVHMatt.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshCollisionAccelerator.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshRayAccelerator.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\triMeshSampler.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\material.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\meshData.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\meshIO.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\meshShapes.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\meshUtil.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\plyHeader.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-mesh\pointCloud.h">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\keycodes.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\nearestNeighborSearch.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\parameterFile.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\pipe.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\sparseGrid3.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\stringUtil.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\stringUtilConvert.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\textWriter.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\timer.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\UIConnection.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\uniformAccelerator.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\utility.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\windowsUtil.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\binaryDataBuffer.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\binaryDataCompressor.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\binaryDataSerialize.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\binaryDataStream.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\colorGradient.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\commandLineReader.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\directory.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\eventMap.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\core-util\flagSet.h">
+      <Filter>mLibHeader\core-util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\mLibInclude.h" />
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\appTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\include\core-graphics\polygon.cpp">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\PCA.cpp">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\sparseMatrix.cpp">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\blockedPCA.cpp">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\denseMatrix.cpp">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-math\eigenSolver.cpp">
+      <Filter>mLibHeader\core-math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\pointCloudIO.cpp">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\triMesh.cpp">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\meshData.cpp">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\meshIO.cpp">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\meshShapes.cpp">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-mesh\pointCloud.cpp">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-base\grid3.cpp">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\core-base\grid2.cpp">
+      <Filter>mLibHeader\core-base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mLibSource.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\appTest.cpp" />
+    <ClCompile Include="..\..\src\application-d3d11\D3D11PointCloud.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11RenderTarget.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11ShaderManager.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11TriMesh.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11Utility.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11VertexShader.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11AssetRenderer.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11Canvas2D.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11GeometryShader.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11GraphicsDevice.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application-d3d11\D3D11PixelShader.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\application-d3d11\D3D11Buffer.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\application-d3d11\D3D11Texture2D.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\application-d3d11\D3D11Texture3D.cpp">
+      <Filter>mLibHeader\application-D3D11</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\pointCloud.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\test.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\core-graphics\camera.inl">
+      <Filter>mLibHeader\core-graphics</Filter>
+    </None>
+    <None Include="..\..\include\core-mesh\triMeshCollisionAccelerator.inl">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </None>
+    <None Include="..\..\include\core-mesh\triMeshRayAccelerator.inl">
+      <Filter>mLibHeader\core-mesh</Filter>
+    </None>
+  </ItemGroup>
+</Project>

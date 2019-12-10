@@ -1,0 +1,1 @@
+On Windows 8.1 the D3D11 SDK layers are required: http://stackoverflow.com/questions/18082080/d3d11-create-device-debug-on-windows-8-1
